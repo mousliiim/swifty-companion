@@ -64,7 +64,7 @@ export interface ProjectUser {
   occurrence: number;
   final_mark: number | null;
   status: 'finished' | 'in_progress' | 'waiting_for_correction' | 'searching_a_group';
-  validated?: boolean | null;
+  'validated?': boolean | null;
   cursus_ids: number[];
   project: {
     id: number;

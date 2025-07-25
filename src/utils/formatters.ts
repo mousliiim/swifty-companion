@@ -80,17 +80,14 @@ export const formatProjectStatus = (
 /**
  * Formate la note finale d'un projet
  */
-export const formatFinalMark = (
-  finalMark: number | null,
-  validated?: boolean | null
-): string => {
+export const formatFinalMark = (finalMark: number | null): string => {
   if (finalMark === null) {
     return 'N/A';
   }
 
   const mark = finalMark.toString();
   
-  // Déterminer le succès/échec basé sur la note (API retourne toujours validated=null)
+  // Déterminer le succès/échec basé sur la note
   if (finalMark < 50) {
     return `${mark} ✗`; // Échec si note < 50
   } else {

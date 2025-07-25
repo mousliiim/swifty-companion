@@ -111,10 +111,10 @@ export const ProjectsList: React.FC<ProjectsListProps> = ({
 const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
   const statusInfo = formatProjectStatus(
     project.status,
-    project.validated,
+    project["validated?"],
     project.final_mark
   );
-  const mark = formatFinalMark(project.final_mark, project.validated);
+  const mark = formatFinalMark(project.final_mark);
 
   return (
     <View style={styles.projectCard}>

@@ -50,7 +50,7 @@ class Api42Service {
 
       const tokenData: AuthTokenResponse = await response.json();
       this.accessToken = tokenData.access_token;
-      this.tokenExpiresAt = Date.now() + tokenData.expires_in * 1000 - 60000; // 1 minute buffer
+      this.tokenExpiresAt = Date.now() + tokenData.expires_in * 1000 - 30000; // 30 seconds buffer
 
       return this.accessToken;
     } catch (error) {
